@@ -1,0 +1,888 @@
+                                                                   Проверка ссылок                                                                    
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Файл                                                ┃ Строка ┃ Ссылка                                             ┃ Статус  ┃ HTTP ┃ Примечание    ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━╇━━━━━━━━━━━━━━━┩
+│ README.md                                           │      3 │ https://www.tldraw.com/f/vmDgAUPRHwqbl6XBioCTd?d=v │ OK      │ 200  │               │
+│                                                     │        │ -165.-209.2230.1510.ktdUMFGMRnE0GSi7qMi_z          │         │      │               │
+│ README.md                                           │      3 │ https://www.figma.com/design/6tajpyASvzCUJziXVmqB6 │ OK      │ 200  │               │
+│                                                     │        │ f/Wiki?node-id=0-1&t=aJzBTT6nICiGYAly-1            │         │      │               │
+│ README.md                                           │      3 │ https://coders.su                                  │ OK      │ 200  │               │
+│ README.md                                           │     94 │ https://github.com/ecto-1/ecto-1/wiki              │ BROKEN  │ 404  │ HTTP 404      │
+│ README.md                                           │     94 │ https://img.shields.io/badge/Documentation-1.0.0-b │ OK      │ 200  │               │
+│                                                     │        │ lue.svg                                            │         │      │               │
+│ Документация/Бэкенд/spaces_endpoints.md             │     12 │ #%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%B2%D1%8B%D0%B5- │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D0%BF%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B   │         │      │               │
+│ Документация/Бэкенд/spaces_endpoints.md             │     13 │ #%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D1%8B        │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/spaces_endpoints.md             │     14 │ #%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D1%86%D0%B8%D1%8F-%D0%B8-%D0%BF%D1%80%D0%BE%D0%B2% │         │      │               │
+│                                                     │        │ D0%B5%D1%80%D0%BA%D0%B0-%D1%81%D0%B5%D1%81%D1%81%D │         │      │               │
+│                                                     │        │ 0%B8%D0%B8                                         │         │      │               │
+│ Документация/Бэкенд/spaces_endpoints.md             │     15 │ #%D1%80%D0%BE%D0%BB%D0%B8-%D0%B8-%D0%B4%D0%BE%D1%8 │ SKIPPED │      │ not checkable │
+│                                                     │        │ 1%D1%82%D1%83%D0%BF%D1%8B                          │         │      │               │
+│ Документация/Бэкенд/spaces_endpoints.md             │     16 │ #soft-delete-%D0%B8-%D0%BE%D0%BA%D0%BD%D0%BE-7-%D0 │ SKIPPED │      │ not checkable │
+│                                                     │        │ %B4%D0%BD%D0%B5%D0%B9                              │         │      │               │
+│ Документация/Бэкенд/spaces_endpoints.md             │     17 │ #%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82- │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D1%8D%D0%BD%D0%B4%D0%BF%D0%BE%D0%B9%D0%BD%D1%82%D │         │      │               │
+│                                                     │        │ 0%BE%D0%B2                                         │         │      │               │
+│ Документация/Бэкенд/spaces_endpoints.md             │     18 │ #get-spaces                                        │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/spaces_endpoints.md             │     19 │ #post-spaces                                       │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/spaces_endpoints.md             │     20 │ #delete-spacesspace_id                             │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/spaces_endpoints.md             │     21 │ #post-spacesspace_idrestore                        │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/spaces_endpoints.md             │     22 │ #%D0%B5%D0%B4%D0%B8%D0%BD%D1%8B%D0%B9-%D1%84%D0%BE │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D1%80%D0%BC%D0%B0%D1%82-%D0%BE%D1%88%D0%B8%D0%B1% │         │      │               │
+│                                                     │        │ D0%BE%D0%BA                                        │         │      │               │
+│ Документация/Бэкенд/spaces_endpoints.md             │     23 │ #%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B5- │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B8   │         │      │               │
+│ Документация/Бэкенд/spaces_endpoints.md             │     24 │ #%D0%BA%D1%80%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D0%BA%D0%B8%D0%B5-%D0%BC%D0%BE%D0%BC%D0%B5%D0%BD%D │         │      │               │
+│                                                     │        │ 1%82%D1%8B-%D0%B8-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D │         │      │               │
+│                                                     │        │ 0%B8%D1%8F-%D0%BF%D0%BE-%D1%83%D0%BC%D0%BE%D0%BB%D │         │      │               │
+│                                                     │        │ 1%87%D0%B0%D0%BD%D0%B8%D1%8E                       │         │      │               │
+│ Документация/Бэкенд/База данных/migration_policy.md │      9 │ #migrations-politic                                │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/База данных/migration_policy.md │     10 │ #create-migrations                                 │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/База данных/migration_policy.md │     11 │ #apply-migrations                                  │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/База данных/migration_policy.md │     12 │ #check-migrations                                  │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/База данных/migration_policy.md │     13 │ #safity-patterns                                   │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/База данных/migration_policy.md │     14 │ #backup-and-recovery                               │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/База данных/migration_policy.md │     15 │ #case-of-incident                                  │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/База данных/migration_policy.md │     16 │ #checklist-for-deployment                          │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/База данных/Архитектура         │     11 │ #1-%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%8 │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ 0%D0%B0-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82 │         │      │               │
+│                                                     │        │ %D0%BE%D1%80%D0%B8%D1%8F                           │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     12 │ #2-%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%B │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ A%D0%B8-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5 │         │      │               │
+│                                                     │        │ %D0%BD%D0%B8%D1%8F-app                             │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     13 │ #21-%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D1%83%D0%BC-%D0 │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ %BA%D0%B0%D0%BA-%D1%87%D0%B0%D1%81%D1%82%D0%BE-%D0 │         │      │               │
+│                                                     │        │ %B1%D1%8B%D0%B2%D0%B0%D0%B5%D1%82-%D0%BD%D0%B0-%D1 │         │      │               │
+│                                                     │        │ %81%D1%82%D0%B0%D1%80%D1%82%D0%B5                  │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     14 │ #22-%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0% │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ B4%D1%83%D0%B5%D0%BC%D0%B0%D1%8F-%D1%81%D1%82%D1%8 │         │      │               │
+│                                                     │        │ 0%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D0%B4%D0%BB │         │      │               │
+│                                                     │        │ %D1%8F-%D1%80%D0%BE%D1%81%D1%82%D0%B0-%D0%BF%D1%80 │         │      │               │
+│                                                     │        │ %D0%BE%D0%B5%D0%BA%D1%82%D0%B0                     │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     15 │ #3-%D0%B1%D0%B0%D0%B7%D0%B0-%D0%B4%D0%B0%D0%BD%D0% │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ BD%D1%8B%D1%85-%D0%B8-%D0%BC%D0%B8%D0%B3%D1%80%D0% │         │      │               │
+│                                                     │        │ B0%D1%86%D0%B8%D0%B8-alembic                       │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     16 │ #4-%D1%82%D0%B5%D1%81%D1%82%D1%8B-%D0%B8-%D0%BC%D0 │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ %BE%D0%BA-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-tes │         │      │               │
+│                                                     │        │ ts                                                 │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     17 │ #5-%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B-%D0% │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ B4%D0%BB%D1%8F-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B │         │      │               │
+│                                                     │        │ 1%D0%BE%D1%82%D0%BA%D0%B8-scripts                  │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     18 │ #6-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%8 │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ 2%D0%B0%D1%86%D0%B8%D1%8F-docs                     │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     19 │ #7-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0-%D0% │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ B8-%D0%B4%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D1%9 │         │      │               │
+│                                                     │        │ 1%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8              │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     20 │ #8-auth--token                                     │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │                                                    │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     21 │ #81-%D0%BD%D0%B0%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0% │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ BD%D0%B8%D0%B5                                     │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     22 │ #82-%D0%BF%D0%BE%D1%82%D0%BE%D0%BA-%D0%B4%D0%B0%D0 │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ %BD%D0%BD%D1%8B%D1%85                              │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     23 │ #83-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1% │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ 82-%D0%B8-%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B8-%D0 │         │      │               │
+│                                                     │        │ %BA%D1%80%D0%B0%D1%82%D0%BA%D0%BE                  │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     24 │ #84-%D0%B3%D0%B4%D0%B5-%D1%84%D0%BE%D1%80%D0%BC%D0 │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ %B8%D1%80%D1%83%D1%8E%D1%82%D1%81%D1%8F-%D0%BA%D0% │         │      │               │
+│                                                     │        │ BE%D0%B4%D1%8B-%D0%B8-%D1%81%D1%85%D0%B5%D0%BC%D1% │         │      │               │
+│                                                     │        │ 8B                                                 │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     25 │ #85-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0% │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ B8                                                 │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     26 │ #86-%D1%87%D1%82%D0%BE-%D0%B8%D0%B7%D0%BC%D0%B5%D0 │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ %BD%D0%B5%D0%BD%D0%BE-%D0%B2-%D1%80%D0%B0%D0%BC%D0 │         │      │               │
+│                                                     │        │ %BA%D0%B0%D1%85-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0% │         │      │               │
+│                                                     │        │ B8                                                 │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     27 │ #87-auth--session-stateful                         │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │                                                    │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     28 │ #9-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8 │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ B%D0%B9-mock-oauthname-token-issuer                │         │      │               │
+│ Документация/Бэкенд/База данных/Архитектура         │     29 │ #10-%D0%BA%D0%B0%D0%BA-%D1%82%D0%B5%D1%81%D1%82%D0 │ SKIPPED │      │ not checkable │
+│ бэкенда.md                                          │        │ %B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D1%84%D1% │         │      │               │
+│                                                     │        │ 83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB │         │      │               │
+│ Документация/Бэкенд/База данных/Миграции.md         │      7 │ #%D1%87%D1%82%D0%BE-%D1%81%D0%B4%D0%B5%D0%BB%D0%B0 │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D0%BD%D0%BE-%D0%B2-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA │         │      │               │
+│                                                     │        │ %D1%82%D0%B5                                       │         │      │               │
+│ Документация/Бэкенд/База данных/Миграции.md         │      8 │ #%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D0%B5%D0%BC%D1%8B%D0%B5-%D0%B8%D0%BD%D1%81%D1%82%D │         │      │               │
+│                                                     │        │ 1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B           │         │      │               │
+│ Документация/Бэкенд/База данных/Миграции.md         │      9 │ #%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D0%B0%D1%86%D0%B8%D1%8F-alembic                    │         │      │               │
+│ Документация/Бэкенд/База данных/Миграции.md         │     10 │ #envpy                                             │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/База данных/Миграции.md         │     11 │ #scriptpymako                                      │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/База данных/Миграции.md         │     12 │ #%D0%BF%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA-%D0%BC │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D0%B8%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%B9-%D0%B8- │         │      │               │
+│                                                     │        │ %D1%81%D1%85%D0%B5%D0%BC%D1%8B                     │         │      │               │
+│ Документация/Бэкенд/База данных/Миграции.md         │     13 │ #0001_create_tmp_table                             │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/База данных/Миграции.md         │     14 │ #%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0-users  │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/База данных/Миграции.md         │     15 │ #%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0-sessio │ SKIPPED │      │ not checkable │
+│                                                     │        │ ns                                                 │         │      │               │
+│ Документация/Бэкенд/База данных/Миграции.md         │     16 │ #%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-alembi │ SKIPPED │      │ not checkable │
+│                                                     │        │ c                                                  │         │      │               │
+│ Документация/Бэкенд/База данных/Миграции.md         │     17 │ #%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE  │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/База данных/Миграции.md         │     18 │ #%D0%B2-docker                                     │ SKIPPED │      │ not checkable │
+│ Документация/Бэкенд/База данных/Миграции.md         │     19 │ #%D0%B8%D0%B4%D0%B5%D0%BC%D0%BF%D0%BE%D1%82%D0%B5% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D0%BD%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%B8-u │         │      │               │
+│                                                     │        │ psert                                              │         │      │               │
+│ Документация/Бэкенд/База данных/Миграции.md         │     20 │ #%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D1%8B%D0%B5-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D │         │      │               │
+│                                                     │        │ 0%BA%D0%B8                                         │         │      │               │
+│ Документация/Бэкенд/База данных/Миграции.md         │     21 │ #%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0- │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D0%BC%D0%B8% │         │      │               │
+│                                                     │        │ D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%B9                │         │      │               │
+│ Документация/Бэкенд/База данных/Миграции.md         │     22 │ #ci-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0% │ SKIPPED │      │ not checkable │
+│                                                     │        │ B0                                                 │         │      │               │
+│ Документация/Бэкенд/База данных/Миграции.md         │     23 │ #%D0%BE%D0%B6%D0%B8%D0%B4%D0%B0%D0%B5%D0%BC%D1%8B% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D0%B9-%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D │         │      │               │
+│                                                     │        │ 0%B0%D1%82                                         │         │      │               │
+│ Документация/Бэкенд/Инструменты качества кода       │      4 │ #%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81-%D1%86%D0%B5 │ SKIPPED │      │ not checkable │
+│ (Ruff, Pre-commit).md                               │        │ %D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C               │         │      │               │
+│ Документация/Бэкенд/Инструменты качества кода       │      5 │ #%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81% │ SKIPPED │      │ not checkable │
+│ (Ruff, Pre-commit).md                               │        │ D0%BA%D0%B0%D1%8F-%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D │         │      │               │
+│                                                     │        │ 0%B7%D0%B0%D1%86%D0%B8%D1%8F                       │         │      │               │
+│ Документация/Бэкенд/Инструменты качества кода       │      6 │ #%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA% │ SKIPPED │      │ not checkable │
+│ (Ruff, Pre-commit).md                               │        │ D0%B0-%D0%B8-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE% │         │      │               │
+│                                                     │        │ D0%B9%D0%BA%D0%B0                                  │         │      │               │
+│ Документация/Бэкенд/Инструменты качества кода       │      7 │ #%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D0%B │ SKIPPED │      │ not checkable │
+│ (Ruff, Pre-commit).md                               │        │ 8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD% │         │      │               │
+│                                                     │        │ D1%82%D0%B0%D0%BC%D0%B8                            │         │      │               │
+│ Документация/Бэкенд/Инструменты качества кода       │      8 │ #%D0%B2%D0%B0%D0%B6%D0%BD%D0%BE                    │ SKIPPED │      │ not checkable │
+│ (Ruff, Pre-commit).md                               │        │                                                    │         │      │               │
+│ Документация/Бэкенд/Ограничение частоты запросов    │      4 │ #%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81-%D1%86%D0%B5 │ SKIPPED │      │ not checkable │
+│ (Rate Limiting).md                                  │        │ %D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C               │         │      │               │
+│ Документация/Бэкенд/Ограничение частоты запросов    │      5 │ #%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81% │ SKIPPED │      │ not checkable │
+│ (Rate Limiting).md                                  │        │ D0%BA%D0%B0%D1%8F-%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D │         │      │               │
+│                                                     │        │ 0%B7%D0%B0%D1%86%D0%B8%D1%8F                       │         │      │               │
+│ Документация/Бэкенд/Ограничение частоты запросов    │      6 │ #%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80% │ SKIPPED │      │ not checkable │
+│ (Rate Limiting).md                                  │        │ D1%8B-%D0%B4%D0%B5%D0%BA%D0%BE%D1%80%D0%B0%D1%82%D │         │      │               │
+│                                                     │        │ 0%BE%D1%80%D0%B0                                   │         │      │               │
+│ Документация/Бэкенд/Ограничение частоты запросов    │      7 │ #%D0%B2%D0%B0%D0%B6%D0%BD%D0%BE                    │ SKIPPED │      │ not checkable │
+│ (Rate Limiting).md                                  │        │                                                    │         │      │               │
+│ Документация/Локальный запуск/Прокси.md             │      5 │ https://github.com/larchanka-training/python-types │ OK      │ 200  │               │
+│                                                     │        │ cript-wiki/blob/5fb06aecf7fa8bc8dbbb1bf0e3e38be20a │         │      │               │
+│                                                     │        │ 0e10ca/docker-compose.yaml#L61                     │         │      │               │
+│ Документация/Локальный запуск/Прокси.md             │     22 │ https://github.com/larchanka-training/python-types │ OK      │ 200  │               │
+│                                                     │        │ cript-wiki/blob/main/proxy/Dockerfile              │         │      │               │
+│ Документация/Локальный запуск/Прокси.md             │     54 │ https://github.com/larchanka-training/python-types │ OK      │ 200  │               │
+│                                                     │        │ cript-wiki/blob/main/proxy/nginx.conf              │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     20 │ #%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE% │ SKIPPED │      │ not checkable │
+│ проекта/Архитектура.md                              │        │ D0%B3%D0%B8%D1%8F-feature-sliced-design            │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     21 │ #%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80% │ SKIPPED │      │ not checkable │
+│ проекта/Архитектура.md                              │        │ D0%B0-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0   │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     22 │ #%D0%BD%D0%B0%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD% │ SKIPPED │      │ not checkable │
+│ проекта/Архитектура.md                              │        │ D0%B8%D0%B5-%D0%BA%D0%B0%D0%B6%D0%B4%D0%BE%D0%B3%D │         │      │               │
+│                                                     │        │ 0%BE-%D1%81%D0%BB%D0%BE%D1%8F                      │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     23 │ #%D0%BF%D0%BE%D1%82%D0%BE%D0%BA%D0%B8-%D0%B4%D0%B0 │ SKIPPED │      │ not checkable │
+│ проекта/Архитектура.md                              │        │ %D0%BD%D0%BD%D1%8B%D1%85                           │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     24 │ #fsd-%D0%B2-%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D │ SKIPPED │      │ not checkable │
+│ проекта/Архитектура.md                              │        │ 0%B8%D0%B8                                         │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     25 │ #%D0%BE%D0%B1%D1%89%D0%B8%D0%B5-%D0%BE%D1%88%D0%B8 │ SKIPPED │      │ not checkable │
+│ проекта/Архитектура.md                              │        │ %D0%B1%D0%BA%D0%B8                                 │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     26 │ #%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2% │ SKIPPED │      │ not checkable │
+│ проекта/Архитектура.md                              │        │ D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE-%D1%81%D0%BB% │         │      │               │
+│                                                     │        │ D0%BE%D1%8F%D0%BC                                  │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     27 │ #%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5- │ SKIPPED │      │ not checkable │
+│ проекта/Архитектура.md                              │        │ %D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8               │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     28 │ #%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0- │ SKIPPED │      │ not checkable │
+│ проекта/Архитектура.md                              │        │ %D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D │         │      │               │
+│                                                     │        │ 1%83%D1%80%D1%8B                                   │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │    896 │ https://feature-sliced.design/                     │ OK      │ 200  │               │
+│ проекта/Архитектура.md                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │    897 │ https://feature-sliced.design/docs/guides          │ OK      │ 200  │               │
+│ проекта/Архитектура.md                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │    898 │ https://feature-sliced.design/docs/reference/layer │ OK      │ 200  │               │
+│ проекта/Архитектура.md                              │        │ s                                                  │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │     17 │ #%D0%BE%D0%B1%D1%89%D0%B5%D0%B5-%D0%BE%D0%BF%D0%B8 │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D1%81%D0%B0%D0%BD%D0%B8%D0%B5                     │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │     18 │ #%D1%86%D0%B5%D0%BB%D0%B8-%D0%BF%D1%80%D0%BE%D0%B5 │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D0%BA%D1%82%D0%B0                                 │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │     19 │ #%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%B2%D1%8B%D0%B5- │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D0%BE%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D │         │      │               │
+│                                                     │        │ 1%81%D1%82%D0%B8-%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0 │         │      │               │
+│                                                     │        │ %B5%D0%BA%D1%82%D1%83%D1%80%D1%8B                  │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │     20 │ #%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B5-%D │         │      │               │
+│                                                     │        │ 1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B8     │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │     21 │ #%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D0%B8%D1%8F-%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D │         │      │               │
+│                                                     │        │ 1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8                 │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │     22 │ #%D0%BE%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%B5% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D0%BD%D0%B8%D1%8F                                  │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │     23 │ #%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D0%B0%D1%86%D0%B8%D1%8F-%D0%B4%D0%BB%D1%8F-%D1%80% │         │      │               │
+│                                                     │        │ D0%B0%D0%B7%D0%BD%D1%8B%D1%85-%D1%80%D0%BE%D0%BB%D │         │      │               │
+│                                                     │        │ 0%B5%D0%B9                                         │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │     24 │ #%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B8%D0%B1%D1%8C% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D1%8E%D1%86%D0%B8%D1%8F                            │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │    146 │ ../02-%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D │ OK      │      │               │
+│                                                     │        │ 0%BA%D0%B0%20%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%84%D0% │         │      │               │
+│                                                     │        │ B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F/%D0%A │         │      │               │
+│                                                     │        │ 3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0% │         │      │               │
+│                                                     │        │ 20%D0%B8%20%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA.md │         │      │               │
+│                                                     │        │ #%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA% │         │      │               │
+│                                                     │        │ D0%B0-%D0%B8-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA  │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │    147 │ ./%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82 │ OK      │      │               │
+│                                                     │        │ %D1%83%D1%80%D0%B0.md                              │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │    148 │ ../05-%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D │ OK      │      │               │
+│                                                     │        │ 1%82%D0%BA%D0%B0/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0 │         │      │               │
+│                                                     │        │ %BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D1%80%D0%B0%D │         │      │               │
+│                                                     │        │ 0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0% │         │      │               │
+│                                                     │        │ BA%D0%B0.md                                        │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │    151 │ ../02-%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D │ OK      │      │               │
+│                                                     │        │ 0%BA%D0%B0%20%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%84%D0% │         │      │               │
+│                                                     │        │ B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F/Docke │         │      │               │
+│                                                     │        │ r.md                                               │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │    152 │ ../02-%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D │ OK      │      │               │
+│                                                     │        │ 0%BA%D0%B0%20%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%84%D0% │         │      │               │
+│                                                     │        │ B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F/%D0%9 │         │      │               │
+│                                                     │        │ F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B% │         │      │               │
+│                                                     │        │ D0%B5%20%D0%BE%D0%BA%D1%80%D1%83%D0%B6%D0%B5%D0%BD │         │      │               │
+│                                                     │        │ %D0%B8%D1%8F.md                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │    153 │ ../02-%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D │ OK      │      │               │
+│                                                     │        │ 0%BA%D0%B0%20%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%84%D0% │         │      │               │
+│                                                     │        │ B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F/%D0%A │         │      │               │
+│                                                     │        │ 1%D0%B1%D0%BE%D1%80%D0%BA%D0%B0.md                 │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │    156 │ ../05-%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D │ OK      │      │               │
+│                                                     │        │ 1%82%D0%BA%D0%B0/%D0%9A%D0%BE%D0%BC%D0%BF%D0%BE%D0 │         │      │               │
+│                                                     │        │ %BD%D0%B5%D0%BD%D1%82%D1%8B%20UI.md                │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │    157 │ ../03-Architecture%20FSD/%D0%A1%D0%BB%D0%BE%D0%B9% │ OK      │      │               │
+│                                                     │        │ 20pages.md                                         │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │    158 │ ../04-%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D │ OK      │      │               │
+│                                                     │        │ 0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1% │         │      │               │
+│                                                     │        │ 8C/                                                │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │    173 │ ../02-%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D │ OK      │      │               │
+│                                                     │        │ 0%BA%D0%B0%20%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%84%D0% │         │      │               │
+│                                                     │        │ B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F/%D0%A │         │      │               │
+│                                                     │        │ 1%D1%82%D0%B8%D0%BB%D1%8C%20%D0%BA%D0%BE%D0%B4%D0% │         │      │               │
+│                                                     │        │ B0.md                                              │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │    174 │ ./%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82 │ OK      │      │               │
+│                                                     │        │ %D1%83%D1%80%D0%B0.md                              │         │      │               │
+│ Документация/Фронтенд/01-Обзор проекта/О проекте.md │    175 │ https://www.conventionalcommits.org/               │ OK      │ 200  │               │
+│ Документация/Фронтенд/01-Обзор                      │     17 │ #%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5- │ SKIPPED │      │ not checkable │
+│ проекта/Технологии.md                               │        │ %D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D │         │      │               │
+│                                                     │        │ 0%B8%D0%B8                                         │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     18 │ #frontend-framework                                │ SKIPPED │      │ not checkable │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     19 │ #build-tooling                                     │ SKIPPED │      │ not checkable │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     20 │ #routing                                           │ SKIPPED │      │ not checkable │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     21 │ #data-fetching--state-management                   │ SKIPPED │      │ not checkable │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     22 │ #ui--styling                                       │ SKIPPED │      │ not checkable │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     23 │ #testing                                           │ SKIPPED │      │ not checkable │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     24 │ #development-tools                                 │ SKIPPED │      │ not checkable │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     25 │ #package-manager                                   │ SKIPPED │      │ not checkable │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     26 │ #alternatives-considered                           │ SKIPPED │      │ not checkable │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     27 │ #requirements                                      │ SKIPPED │      │ not checkable │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     28 │ #packagejson-scripts                               │ SKIPPED │      │ not checkable │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │     29 │ #%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5- │ SKIPPED │      │ not checkable │
+│ проекта/Технологии.md                               │        │ %D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8               │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │    447 │ https://react.dev/                                 │ OK      │ 200  │               │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │    448 │ https://vitejs.dev/                                │ OK      │ 200  │               │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │    449 │ https://tanstack.com/router/latest                 │ OK      │ 200  │               │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │    450 │ https://tanstack.com/query/latest                  │ OK      │ 200  │               │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │    451 │ https://tailwindcss.com/                           │ OK      │ 200  │               │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │    452 │ https://www.radix-ui.com/                          │ OK      │ 200  │               │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │    453 │ https://orval.dev/                                 │ OK      │ 200  │               │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │    454 │ https://zod.dev/                                   │ OK      │ 200  │               │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │    455 │ https://vitest.dev/                                │ OK      │ 200  │               │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/01-Обзор                      │    456 │ https://playwright.dev/                            │ OK      │ 200  │               │
+│ проекта/Технологии.md                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     17 │ #%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D0%B0%D1%80%D1%85 │ SKIPPED │      │ not checkable │
+│ конфигурация/API клиент.md                          │        │ %D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D1%8B   │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     18 │ #orval-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83% │ SKIPPED │      │ not checkable │
+│ конфигурация/API клиент.md                          │        │ D1%80%D0%B0%D1%86%D0%B8%D1%8F                      │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     19 │ #%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%86%D0%B8% │ SKIPPED │      │ not checkable │
+│ конфигурация/API клиент.md                          │        │ D1%8F-api-%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0% │         │      │               │
+│                                                     │        │ B0                                                 │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     20 │ #fetch-mutator                                     │ SKIPPED │      │ not checkable │
+│ конфигурация/API клиент.md                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     21 │ #mock-vs-real-api                                  │ SKIPPED │      │ not checkable │
+│ конфигурация/API клиент.md                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     22 │ #%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE% │ SKIPPED │      │ not checkable │
+│ конфигурация/API клиент.md                          │        │ D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-tanstack-query       │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     23 │ #zod-%D0%B2%D0%B0%D0%BB%D0%B8%D0%B4%D0%B0%D1%86%D0 │ SKIPPED │      │ not checkable │
+│ конфигурация/API клиент.md                          │        │ %B8%D1%8F                                          │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    508 │ https://orval.dev/                                 │ OK      │ 200  │               │
+│ конфигурация/API клиент.md                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    509 │ https://tanstack.com/query/latest                  │ OK      │ 200  │               │
+│ конфигурация/API клиент.md                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    510 │ https://zod.dev/                                   │ OK      │ 200  │               │
+│ конфигурация/API клиент.md                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    511 │ https://developer.mozilla.org/en-US/docs/Web/API/F │ OK      │ 200  │               │
+│ конфигурация/API клиент.md                          │        │ etch_API                                           │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     29 │ #%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80% │ SKIPPED │      │ not checkable │
+│ конфигурация/Docker.md                              │        │ D0%B0-%D0%BC%D0%BE%D0%BD%D0%BE%D1%80%D0%B5%D0%BF%D │         │      │               │
+│                                                     │        │ 0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F     │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     30 │ #dockerfile                                        │ SKIPPED │      │ not checkable │
+│ конфигурация/Docker.md                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     31 │ #docker-composeyaml                                │ SKIPPED │      │ not checkable │
+│ конфигурация/Docker.md                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     32 │ #%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD% │ SKIPPED │      │ not checkable │
+│ конфигурация/Docker.md                              │        │ D1%8B%D0%B5-%D0%BE%D0%BA%D1%80%D1%83%D0%B6%D0%B5%D │         │      │               │
+│                                                     │        │ 0%BD%D0%B8%D1%8F                                   │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     33 │ #%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%87%D0%B5 │ SKIPPED │      │ not checkable │
+│ конфигурация/Docker.md                              │        │ %D1%80%D0%B5%D0%B7-docker-compose                  │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     34 │ #%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B0-%D0%BE%D0%B1 │ SKIPPED │      │ not checkable │
+│ конфигурация/Docker.md                              │        │ %D1%80%D0%B0%D0%B7%D0%B0                           │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     35 │ #%D1%80%D0%B0%D0%B7%D0%B2%D1%91%D1%80%D1%82%D1%8B% │ SKIPPED │      │ not checkable │
+│ конфигурация/Docker.md                              │        │ D0%B2%D0%B0%D0%BD%D0%B8%D0%B5                      │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    353 │ https://docs.docker.com/                           │ OK      │ 200  │               │
+│ конфигурация/Docker.md                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    354 │ https://docs.docker.com/compose/                   │ OK      │ 200  │               │
+│ конфигурация/Docker.md                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    355 │ https://git-scm.com/book/en/v2/Git-Tools-Submodule │ OK      │ 200  │               │
+│ конфигурация/Docker.md                              │        │ s                                                  │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     34 │ #%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D0%BF%D0%B5%D1%80 │ SKIPPED │      │ not checkable │
+│ конфигурация/Переменные окружения.md                │        │ %D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D1%85         │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     35 │ #%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83% │ SKIPPED │      │ not checkable │
+│ конфигурация/Переменные окружения.md                │        │ D0%B5%D0%BC%D1%8B%D0%B5-%D0%BF%D0%B5%D1%80%D0%B5%D │         │      │               │
+│                                                     │        │ 0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5                 │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     36 │ #%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD% │ SKIPPED │      │ not checkable │
+│ конфигурация/Переменные окружения.md                │        │ D1%8B%D0%B5-%D0%B2%D0%BD%D0%B5-runtime-%D0%BA%D0%B │         │      │               │
+│                                                     │        │ E%D0%B4%D0%B0-%D1%84%D1%80%D0%BE%D0%BD%D1%82%D0%B5 │         │      │               │
+│                                                     │        │ %D0%BD%D0%B4%D0%B0                                 │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     37 │ #%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B-%D0%BA │ SKIPPED │      │ not checkable │
+│ конфигурация/Переменные окружения.md                │        │ %D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D │         │      │               │
+│                                                     │        │ 1%86%D0%B8%D0%B9                                   │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     38 │ #%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF-%D0%BA-%D0%B │ SKIPPED │      │ not checkable │
+│ конфигурация/Переменные окружения.md                │        │ F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B% │         │      │               │
+│                                                     │        │ D0%BC-%D0%B2-%D0%BA%D0%BE%D0%B4%D0%B5              │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     39 │ #gitignore                                         │ SKIPPED │      │ not checkable │
+│ конфигурация/Переменные окружения.md                │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    464 │ https://vitejs.dev/guide/env-and-mode.html         │ OK      │ 200  │               │
+│ конфигурация/Переменные окружения.md                │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    465 │ https://tanstack.com/query/latest/docs/react/refer │ OK      │ 200  │               │
+│ конфигурация/Переменные окружения.md                │        │ ence/QueryClient                                   │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     17 │ #%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D0%BA%D0%BE%D0%BD │ SKIPPED │      │ not checkable │
+│ конфигурация/Сборка.md                              │        │ %D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D │         │      │               │
+│                                                     │        │ 0%B9                                               │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     18 │ #vite-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D │ SKIPPED │      │ not checkable │
+│ конфигурация/Сборка.md                              │        │ 1%80%D0%B0%D1%86%D0%B8%D1%8F                       │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     19 │ #typescript-project-references                     │ SKIPPED │      │ not checkable │
+│ конфигурация/Сборка.md                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     20 │ #path-aliases                                      │ SKIPPED │      │ not checkable │
+│ конфигурация/Сборка.md                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     21 │ #%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0% │ SKIPPED │      │ not checkable │
+│ конфигурация/Сборка.md                              │        │ D1%86%D0%B8%D1%8F-%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D │         │      │               │
+│                                                     │        │ 0%B8                                               │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     22 │ #dev-server                                        │ SKIPPED │      │ not checkable │
+│ конфигурация/Сборка.md                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     23 │ #production-build                                  │ SKIPPED │      │ not checkable │
+│ конфигурация/Сборка.md                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    551 │ https://vitejs.dev/                                │ OK      │ 200  │               │
+│ конфигурация/Сборка.md                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    552 │ https://www.typescriptlang.org/docs/handbook/proje │ OK      │ 200  │               │
+│ конфигурация/Сборка.md                              │        │ ct-references.html                                 │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    553 │ https://www.typescriptlang.org/tsconfig#paths      │ OK      │ 200  │               │
+│ конфигурация/Сборка.md                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     16 │ #%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D0%B8%D0%BD%D1%81 │ SKIPPED │      │ not checkable │
+│ конфигурация/Стиль кода.md                          │        │ %D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D │         │      │               │
+│                                                     │        │ 0%B2                                               │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     17 │ #eslint                                            │ SKIPPED │      │ not checkable │
+│ конфигурация/Стиль кода.md                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     18 │ #prettier                                          │ SKIPPED │      │ not checkable │
+│ конфигурация/Стиль кода.md                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     19 │ #husky-git-hooks                                   │ SKIPPED │      │ not checkable │
+│ конфигурация/Стиль кода.md                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     20 │ #lint-staged                                       │ SKIPPED │      │ not checkable │
+│ конфигурация/Стиль кода.md                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     21 │ #%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD% │ SKIPPED │      │ not checkable │
+│ конфигурация/Стиль кода.md                          │        │ D0%B8%D0%B5-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB   │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    354 │ https://eslint.org/                                │ OK      │ 200  │               │
+│ конфигурация/Стиль кода.md                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    355 │ https://prettier.io/                               │ OK      │ 200  │               │
+│ конфигурация/Стиль кода.md                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    356 │ https://typicode.github.io/husky/                  │ OK      │ 200  │               │
+│ конфигурация/Стиль кода.md                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    357 │ https://github.com/okonet/lint-staged              │ OK      │ 200  │               │
+│ конфигурация/Стиль кода.md                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     19 │ #%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80% │ SKIPPED │      │ not checkable │
+│ конфигурация/Установка и запуск.md                  │        │ D0%B0-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D │         │      │               │
+│                                                     │        │ 0%BE%D1%80%D0%B8%D1%8F                             │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     20 │ #%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D1%8B% │ SKIPPED │      │ not checkable │
+│ конфигурация/Установка и запуск.md                  │        │ D0%B5-%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D │         │      │               │
+│                                                     │        │ 0%BD%D0%B8%D1%8F                                   │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     21 │ #%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%87%D0%B5 │ SKIPPED │      │ not checkable │
+│ конфигурация/Установка и запуск.md                  │        │ %D1%80%D0%B5%D0%B7-docker-compose-%D0%B2-%D0%BC%D0 │         │      │               │
+│                                                     │        │ %BE%D0%BD%D0%BE%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B │         │      │               │
+│                                                     │        │ 8%D1%82%D0%BE%D1%80%D0%B8%D0%B8                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     22 │ #%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0% │ SKIPPED │      │ not checkable │
+│ конфигурация/Установка и запуск.md                  │        │ D1%8F-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D │         │      │               │
+│                                                     │        │ 1%82%D0%BA%D0%B0-%D0%B1%D0%B5%D0%B7-docker         │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     23 │ #%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%BF%D1%80 │ SKIPPED │      │ not checkable │
+│ конфигурация/Установка и запуск.md                  │        │ %D0%BE%D0%B5%D0%BA%D1%82%D0%B0-%D0%BB%D0%BE%D0%BA% │         │      │               │
+│                                                     │        │ D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%B1%D0%B5%D0%B7-d │         │      │               │
+│                                                     │        │ ocker                                              │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     24 │ #%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%86%D0%B8% │ SKIPPED │      │ not checkable │
+│ конфигурация/Установка и запуск.md                  │        │ D1%8F-api-%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0% │         │      │               │
+│                                                     │        │ B0                                                 │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     25 │ #dockerfile                                        │ SKIPPED │      │ not checkable │
+│ конфигурация/Установка и запуск.md                  │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     26 │ #%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D0%B2-%D1%8 │ SKIPPED │      │ not checkable │
+│ конфигурация/Установка и запуск.md                  │        │ 0%D0%B0%D0%B7%D0%BD%D1%8B%D1%85-%D1%80%D0%B5%D0%B6 │         │      │               │
+│                                                     │        │ %D0%B8%D0%BC%D0%B0%D1%85                           │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │     27 │ #troubleshooting                                   │ SKIPPED │      │ not checkable │
+│ конфигурация/Установка и запуск.md                  │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    208 │ ./%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD │ OK      │      │               │
+│ конфигурация/Установка и запуск.md                  │        │ %D1%8B%D0%B5%20%D0%BE%D0%BA%D1%80%D1%83%D0%B6%D0%B │         │      │               │
+│                                                     │        │ 5%D0%BD%D0%B8%D1%8F.md                             │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    290 │ ./API%20%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82.md    │ OK      │      │               │
+│ конфигурация/Установка и запуск.md                  │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    383 │ https://vitejs.dev/                                │ OK      │ 200  │               │
+│ конфигурация/Установка и запуск.md                  │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    384 │ https://tanstack.com/query/latest                  │ OK      │ 200  │               │
+│ конфигурация/Установка и запуск.md                  │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    385 │ https://orval.dev/                                 │ OK      │ 200  │               │
+│ конфигурация/Установка и запуск.md                  │        │                                                    │         │      │               │
+│ Документация/Фронтенд/02-Настройка и                │    386 │ https://react.dev/                                 │ OK      │ 200  │               │
+│ конфигурация/Установка и запуск.md                  │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     17 │ #%D0%BD%D0%B0%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD% │ SKIPPED │      │ not checkable │
+│ app.md                                              │        │ D0%B8%D0%B5-%D0%B8-%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0% │         │      │               │
+│                                                     │        │ D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8                │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     18 │ #%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80% │ SKIPPED │      │ not checkable │
+│ app.md                                              │        │ D0%B0-%D1%81%D0%BB%D0%BE%D1%8F                     │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     19 │ #%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80% │ SKIPPED │      │ not checkable │
+│ app.md                                              │        │ D0%B0%D1%86%D0%B8%D1%8F-%D0%BC%D0%B0%D1%80%D1%88%D │         │      │               │
+│                                                     │        │ 1%80%D1%83%D1%82%D0%B8%D0%B7%D0%B0%D1%82%D0%BE%D1% │         │      │               │
+│                                                     │        │ 80%D0%B0                                           │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     20 │ #%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B0-%D0%BC%D0%B0 │ SKIPPED │      │ not checkable │
+│ app.md                                              │        │ %D1%80%D1%88%D1%80%D1%83%D1%82%D0%BE%D0%B2         │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     21 │ #%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA% │ SKIPPED │      │ not checkable │
+│ app.md                                              │        │ D0%B0-%D0%BF%D1%80%D0%BE%D0%B2%D0%B0%D0%B9%D0%B4%D │         │      │               │
+│                                                     │        │ 0%B5%D1%80%D0%BE%D0%B2                             │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     22 │ #%D0%B3%D0%BB%D0%BE%D0%B1%D0%B0%D0%BB%D1%8C%D0%BD% │ SKIPPED │      │ not checkable │
+│ app.md                                              │        │ D1%8B%D0%B5-%D1%81%D1%82%D0%B8%D0%BB%D0%B8         │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     23 │ #best-practices                                    │ SKIPPED │      │ not checkable │
+│ app.md                                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    381 │ https://tanstack.com/router/latest                 │ OK      │ 200  │               │
+│ app.md                                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    382 │ https://tanstack.com/query/latest                  │ OK      │ 200  │               │
+│ app.md                                              │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    383 │ https://feature-sliced.design/docs/reference/layer │ OK      │ 200  │               │
+│ app.md                                              │        │ s#app                                              │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     17 │ #%D0%BD%D0%B0%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD% │ SKIPPED │      │ not checkable │
+│ entities.md                                         │        │ D0%B8%D0%B5-%D0%B8-%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0% │         │      │               │
+│                                                     │        │ D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8                │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     18 │ #%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80% │ SKIPPED │      │ not checkable │
+│ entities.md                                         │        │ D0%B0-%D1%81%D0%BB%D0%BE%D1%8F                     │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     19 │ #%D1%81%D1%83%D1%89%D0%BD%D0%BE%D1%81%D1%82%D1%8C- │ SKIPPED │      │ not checkable │
+│ entities.md                                         │        │ user                                               │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     20 │ #%D1%81%D1%83%D1%89%D0%BD%D0%BE%D1%81%D1%82%D1%8C- │ SKIPPED │      │ not checkable │
+│ entities.md                                         │        │ space                                              │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     21 │ #%D1%81%D1%83%D1%89%D0%BD%D0%BE%D1%81%D1%82%D1%8C- │ SKIPPED │      │ not checkable │
+│ entities.md                                         │        │ activity                                           │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     22 │ #best-practices                                    │ SKIPPED │      │ not checkable │
+│ entities.md                                         │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     23 │ #%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5- │ SKIPPED │      │ not checkable │
+│ entities.md                                         │        │ %D0%BD%D0%BE%D0%B2%D1%8B%D1%85-%D1%81%D1%83%D1%89% │         │      │               │
+│                                                     │        │ D0%BD%D0%BE%D1%81%D1%82%D0%B5%D0%B9                │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    751 │ https://feature-sliced.design/docs/reference/layer │ OK      │ 200  │               │
+│ entities.md                                         │        │ s#entities                                         │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    752 │ https://zod.dev/                                   │ OK      │ 200  │               │
+│ entities.md                                         │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    753 │ https://tanstack.com/query/latest                  │ OK      │ 200  │               │
+│ entities.md                                         │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    754 │ https://vitest.dev/                                │ OK      │ 200  │               │
+│ entities.md                                         │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     17 │ #%D0%BD%D0%B0%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD% │ SKIPPED │      │ not checkable │
+│ features.md                                         │        │ D0%B8%D0%B5-%D0%B8-%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0% │         │      │               │
+│                                                     │        │ D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8                │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     18 │ #%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80% │ SKIPPED │      │ not checkable │
+│ features.md                                         │        │ D0%B0-%D1%81%D0%BB%D0%BE%D1%8F                     │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     19 │ #%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D1%84%D0%B8%D1%87 │ SKIPPED │      │ not checkable │
+│ features.md                                         │        │ %D0%B8-edit-space                                  │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     20 │ #%D0%BF%D0%B0%D1%82%D1%82%D0%B5%D1%80%D0%BD%D1%8B- │ SKIPPED │      │ not checkable │
+│ features.md                                         │        │ %D1%84%D0%B8%D1%87                                 │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     21 │ #best-practices                                    │ SKIPPED │      │ not checkable │
+│ features.md                                         │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     22 │ #%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD% │ SKIPPED │      │ not checkable │
+│ features.md                                         │        │ D0%B8%D0%B5-%D0%BD%D0%BE%D0%B2%D1%8B%D1%85-%D1%84% │         │      │               │
+│                                                     │        │ D0%B8%D1%87                                        │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    680 │ https://feature-sliced.design/docs/reference/layer │ OK      │ 200  │               │
+│ features.md                                         │        │ s#features                                         │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    681 │ https://tanstack.com/query/latest/docs/framework/r │ OK      │ 200  │               │
+│ features.md                                         │        │ eact/guides/optimistic-updates                     │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    682 │ https://react.dev/reference/react/useReducer       │ OK      │ 200  │               │
+│ features.md                                         │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    683 │ https://reactpatterns.com/                         │ OK      │ 200  │               │
+│ features.md                                         │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     17 │ #%D0%BD%D0%B0%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD% │ SKIPPED │      │ not checkable │
+│ pages.md                                            │        │ D0%B8%D0%B5-%D0%B8-%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0% │         │      │               │
+│                                                     │        │ D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8                │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     18 │ #%D0%BF%D0%B0%D1%82%D1%82%D0%B5%D1%80%D0%BD-%D0%BA │ SKIPPED │      │ not checkable │
+│ pages.md                                            │        │ %D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D │         │      │               │
+│                                                     │        │ 0%B8-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     19 │ #%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0% │ SKIPPED │      │ not checkable │
+│ pages.md                                            │        │ D1%86%D0%B8%D1%8F-%D0%BC%D0%B0%D1%80%D1%88%D1%80%D │         │      │               │
+│                                                     │        │ 1%83%D1%82%D0%BE%D0%B2                             │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     20 │ #%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D1%81%D1%82%D1%80 │ SKIPPED │      │ not checkable │
+│ pages.md                                            │        │ %D0%B0%D0%BD%D0%B8%D1%86                           │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     21 │ #best-practices                                    │ SKIPPED │      │ not checkable │
+│ pages.md                                            │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     22 │ #%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD% │ SKIPPED │      │ not checkable │
+│ pages.md                                            │        │ D0%B8%D0%B5-%D0%BD%D0%BE%D0%B2%D1%8B%D1%85-%D1%81% │         │      │               │
+│                                                     │        │ D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86                │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    720 │ https://tanstack.com/router/latest                 │ OK      │ 200  │               │
+│ pages.md                                            │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    721 │ https://feature-sliced.design/docs/reference/layer │ OK      │ 200  │               │
+│ pages.md                                            │        │ s#pages                                            │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    722 │ https://tanstack.com/router/latest/docs/framework/ │ OK      │ 200  │               │
+│ pages.md                                            │        │ react/guide/navigation/                            │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     17 │ #%D0%BD%D0%B0%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD% │ SKIPPED │      │ not checkable │
+│ shared.md                                           │        │ D0%B8%D0%B5-%D0%B8-%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0% │         │      │               │
+│                                                     │        │ D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8                │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     18 │ #%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80% │ SKIPPED │      │ not checkable │
+│ shared.md                                           │        │ D0%B0-%D1%81%D0%BB%D0%BE%D1%8F                     │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     19 │ #ui-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0% │ SKIPPED │      │ not checkable │
+│ shared.md                                           │        │ BD%D1%82%D1%8B                                     │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     20 │ #%D1%83%D1%82%D0%B8%D0%BB%D0%B8%D1%82%D1%8B        │ SKIPPED │      │ not checkable │
+│ shared.md                                           │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     21 │ #mock-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5         │ SKIPPED │      │ not checkable │
+│ shared.md                                           │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     22 │ #orval-api-%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82    │ SKIPPED │      │ not checkable │
+│ shared.md                                           │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     23 │ #best-practices                                    │ SKIPPED │      │ not checkable │
+│ shared.md                                           │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     24 │ #%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD% │ SKIPPED │      │ not checkable │
+│ shared.md                                           │        │ D0%B8%D0%B5-%D0%BD%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA% │         │      │               │
+│                                                     │        │ D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0 │         │      │               │
+│                                                     │        │ %BE%D0%B2                                          │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │   1323 │ https://feature-sliced.design/docs/reference/layer │ OK      │ 200  │               │
+│ shared.md                                           │        │ s#shared                                           │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │   1324 │ https://www.radix-ui.com/                          │ OK      │ 200  │               │
+│ shared.md                                           │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │   1325 │ https://tailwindcss.com/docs                       │ OK      │ 200  │               │
+│ shared.md                                           │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │   1326 │ https://cva.style/docs                             │ OK      │ 200  │               │
+│ shared.md                                           │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │   1327 │ https://orval.dev/                                 │ OK      │ 200  │               │
+│ shared.md                                           │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     17 │ #%D0%BD%D0%B0%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD% │ SKIPPED │      │ not checkable │
+│ widgets.md                                          │        │ D0%B8%D0%B5-%D0%B8-%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0% │         │      │               │
+│                                                     │        │ D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8                │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     18 │ #%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80% │ SKIPPED │      │ not checkable │
+│ widgets.md                                          │        │ D0%B0-%D1%81%D0%BB%D0%BE%D1%8F                     │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     19 │ #%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D0%B2%D0%B8%D0%B4 │ SKIPPED │      │ not checkable │
+│ widgets.md                                          │        │ %D0%B6%D0%B5%D1%82%D0%BE%D0%B2                     │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     20 │ #%D0%BF%D0%B0%D1%82%D1%82%D0%B5%D1%80%D0%BD%D1%8B- │ SKIPPED │      │ not checkable │
+│ widgets.md                                          │        │ %D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D │         │      │               │
+│                                                     │        │ 0%B8%D0%B8                                         │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     21 │ #best-practices                                    │ SKIPPED │      │ not checkable │
+│ widgets.md                                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │     22 │ #%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD% │ SKIPPED │      │ not checkable │
+│ widgets.md                                          │        │ D0%B8%D0%B5-%D0%BD%D0%BE%D0%B2%D1%8B%D1%85-%D0%B2% │         │      │               │
+│                                                     │        │ D0%B8%D0%B4%D0%B6%D0%B5%D1%82%D0%BE%D0%B2          │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    431 │ https://feature-sliced.design/docs/reference/layer │ OK      │ 200  │               │
+│ widgets.md                                          │        │ s#widgets                                          │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    432 │ https://react.dev/learn/your-first-component       │ OK      │ 200  │               │
+│ widgets.md                                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/03-Architecture FSD/Слой      │    433 │ https://reactpatterns.com/                         │ OK      │ 200  │               │
+│ widgets.md                                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Авториза… │     17 │ #%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D0%BF%D0%BE%D1%82 │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D0%BE%D0%BA%D0%B0-%D0%B0%D0%B2%D1%82%D0%BE%D1%80% │         │      │               │
+│                                                     │        │ D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8                │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Авториза… │     18 │ #sso-oauth-oauthname                               │ SKIPPED │      │ not checkable │
+│ Документация/Фронтенд/04-Функциональность/Авториза… │     19 │ #%D0%B2%D0%B5%D1%80%D0%B8%D1%84%D0%B8%D0%BA%D0%B0% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D1%86%D0%B8%D1%8F-%D1%82%D0%BE%D0%BA%D0%B5%D0%BD%D │         │      │               │
+│                                                     │        │ 0%B0                                               │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Авториза… │     20 │ #%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5- │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D1%81%D0%B5%D1%81%D1%81%D0%B8%D0%B8               │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Авториза… │     21 │ #%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D0%B8%D0%B5-%D1%82%D0%BE%D0%BA%D0%B5%D0%BD%D0%BE%D │         │      │               │
+│                                                     │        │ 0%BC                                               │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Авториза… │     22 │ #%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B0-%D0%BC%D0%B0 │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D1%80%D1%88%D1%80%D1%83%D1%82%D0%BE%D0%B2         │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Авториза… │     23 │ #%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D0%B0-%D0%BE%D1%88%D0%B8%D0%B1%D0%BE%D0%BA         │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Авториза… │    841 │ https://feature-sliced.design/docs/get-started/ove │ OK      │ 200  │               │
+│                                                     │        │ rview                                              │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Авториза… │    842 │ https://tanstack.com/router/latest                 │ OK      │ 200  │               │
+│ Документация/Фронтенд/04-Функциональность/Авториза… │    843 │ https://tanstack.com/query/latest                  │ OK      │ 200  │               │
+│ Документация/Фронтенд/04-Функциональность/Интеграц… │     19 │ #%D1%82%D0%B5%D0%BA%D1%83%D1%89%D0%B5%D0%B5-%D1%81 │ SKIPPED │      │ not checkable │
+│ с API.md                                            │        │ %D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D0%B5-% │         │      │               │
+│                                                     │        │ D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0 │         │      │               │
+│                                                     │        │ %B8%D0%B8                                          │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Интеграц… │     20 │ #fetch-mutator                                     │ SKIPPED │      │ not checkable │
+│ с API.md                                            │        │                                                    │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Интеграц… │     21 │ #tanstack-query-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0% │ SKIPPED │      │ not checkable │
+│ с API.md                                            │        │ B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F             │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Интеграц… │     22 │ #%D0%BF%D0%B0%D1%82%D1%82%D0%B5%D1%80%D0%BD%D1%8B- │ SKIPPED │      │ not checkable │
+│ с API.md                                            │        │ %D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D │         │      │               │
+│                                                     │        │ 0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D1%85%D1%83%D0%BA%D0 │         │      │               │
+│                                                     │        │ %BE%D0%B2                                          │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Интеграц… │     23 │ #%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D1%81%D1%82% │ SKIPPED │      │ not checkable │
+│ с API.md                                            │        │ D0%B8%D1%87%D0%BD%D1%8B%D0%B5-%D0%BE%D0%B1%D0%BD%D │         │      │               │
+│                                                     │        │ 0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F           │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Интеграц… │     24 │ #%D0%B8%D0%BD%D0%B2%D0%B0%D0%BB%D0%B8%D0%B4%D0%B0% │ SKIPPED │      │ not checkable │
+│ с API.md                                            │        │ D1%86%D0%B8%D1%8F-%D0%BA%D1%8D%D1%88%D0%B0         │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Интеграц… │     25 │ #%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8% │ SKIPPED │      │ not checkable │
+│ с API.md                                            │        │ D0%B8-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D │         │      │               │
+│                                                     │        │ 0%BA%D0%B8-%D0%BE%D1%88%D0%B8%D0%B1%D0%BE%D0%BA    │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Интеграц… │     26 │ #%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8% │ SKIPPED │      │ not checkable │
+│ с API.md                                            │        │ D1%8F-%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D │         │      │               │
+│                                                     │        │ 0%B8                                               │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Интеграц… │    796 │ https://tanstack.com/query/latest                  │ OK      │ 200  │               │
+│ с API.md                                            │        │                                                    │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Интеграц… │    797 │ https://orval.dev/                                 │ OK      │ 200  │               │
+│ с API.md                                            │        │                                                    │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Интеграц… │    798 │ https://feature-sliced.design/docs/reference/layer │ OK      │ 200  │               │
+│ с API.md                                            │        │ s#shared                                           │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Интеграц… │    799 │ https://react.dev/learn                            │ OK      │ 200  │               │
+│ с API.md                                            │        │                                                    │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Простран… │     17 │ #%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D0%BF%D1%80%D0%BE │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2   │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Простран… │     18 │ #%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5- │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D │         │      │               │
+│                                                     │        │ 1%81%D1%82%D0%B2%D0%B0                             │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Простран… │     19 │ #%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D │         │      │               │
+│                                                     │        │ 0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0% │         │      │               │
+│                                                     │        │ B2%D0%B0                                           │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Простран… │     20 │ #%D0%BF%D1%80%D0%B0%D0%B2%D0%B0-%D0%B4%D0%BE%D1%81 │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D1%82%D1%83%D0%BF%D0%B0                           │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Простран… │     21 │ #mock-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5         │ SKIPPED │      │ not checkable │
+│ Документация/Фронтенд/04-Функциональность/Простран… │   1084 │ https://feature-sliced.design/docs/reference/layer │ OK      │ 200  │               │
+│                                                     │        │ s#entities                                         │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Простран… │   1085 │ https://tanstack.com/query/latest                  │ OK      │ 200  │               │
+│ Документация/Фронтенд/04-Функциональность/Простран… │   1086 │ https://react.dev/learn                            │ OK      │ 200  │               │
+│ Документация/Фронтенд/04-Функциональность/Статьи.md │     17 │ #%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D1%81%D1%82%D0%B0 │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D1%82%D0%B5%D0%B9                                 │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Статьи.md │     18 │ #%D1%82%D0%B8%D0%BF%D1%8B-%D1%81%D1%82%D0%B0%D1%82 │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D0%B5%D0%B9                                       │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Статьи.md │     19 │ #ui-%D1%81%D1%82%D0%B0%D1%82%D0%B5%D0%B9           │ SKIPPED │      │ not checkable │
+│ Документация/Фронтенд/04-Функциональность/Статьи.md │     20 │ #mock-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5         │ SKIPPED │      │ not checkable │
+│ Документация/Фронтенд/04-Функциональность/Статьи.md │     21 │ #%D0%BD%D0%B0%D0%B2%D0%B8%D0%B3%D0%B0%D1%86%D0%B8% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D1%8F-%D0%BA-%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B5  │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Статьи.md │    220 │ https://feature-sliced.design/docs/reference/layer │ OK      │ 200  │               │
+│                                                     │        │ s#entities                                         │         │      │               │
+│ Документация/Фронтенд/04-Функциональность/Статьи.md │    221 │ https://tanstack.com/query/latest                  │ OK      │ 200  │               │
+│ Документация/Фронтенд/04-Функциональность/Статьи.md │    222 │ https://tanstack.com/router/latest                 │ OK      │ 200  │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │     17 │ #%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-ui-%D0%BA%D0%BE%D0 │ SKIPPED │      │ not checkable │
+│ UI.md                                               │        │ %BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0%BE%D0%B │         │      │               │
+│                                                     │        │ 2                                                  │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │     18 │ #button                                            │ SKIPPED │      │ not checkable │
+│ UI.md                                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │     19 │ #input                                             │ SKIPPED │      │ not checkable │
+│ UI.md                                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │     20 │ #card                                              │ SKIPPED │      │ not checkable │
+│ UI.md                                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │     21 │ #alert                                             │ SKIPPED │      │ not checkable │
+│ UI.md                                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │     22 │ #select                                            │ SKIPPED │      │ not checkable │
+│ UI.md                                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │     23 │ #dropdownmenu                                      │ SKIPPED │      │ not checkable │
+│ UI.md                                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │     24 │ #dialog                                            │ SKIPPED │      │ not checkable │
+│ UI.md                                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │     25 │ #morphingbutton                                    │ SKIPPED │      │ not checkable │
+│ UI.md                                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │     26 │ #%D0%B8%D0%BC%D0%BF%D0%BE%D1%80%D1%82-%D0%BA%D0%BE │ SKIPPED │      │ not checkable │
+│ UI.md                                               │        │ %D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0%BE%D │         │      │               │
+│                                                     │        │ 0%B2                                               │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │     27 │ #%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD% │ SKIPPED │      │ not checkable │
+│ UI.md                                               │        │ D0%B8%D0%B5-%D0%BD%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA% │         │      │               │
+│                                                     │        │ D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0 │         │      │               │
+│                                                     │        │ %BE%D0%B2-shadcnui                                 │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │    764 │ https://ui.shadcn.com/                             │ OK      │ 200  │               │
+│ UI.md                                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │    765 │ https://www.radix-ui.com/                          │ OK      │ 200  │               │
+│ UI.md                                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │    766 │ https://cva.style/                                 │ OK      │ 200  │               │
+│ UI.md                                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │    767 │ https://tailwindcss.com/                           │ OK      │ 200  │               │
+│ UI.md                                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Компоненты      │    768 │ https://lucide.dev/                                │ OK      │ 200  │               │
+│ UI.md                                               │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Решение         │     17 │ #%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD% │ SKIPPED │      │ not checkable │
+│ проблем.md                                          │        │ D1%8B%D0%B5-%D0%BE%D0%BA%D1%80%D1%83%D0%B6%D0%B5%D │         │      │               │
+│                                                     │        │ 0%BD%D0%B8%D1%8F                                   │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Решение         │     18 │ #%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0% │ SKIPPED │      │ not checkable │
+│ проблем.md                                          │        │ D1%86%D0%B8%D1%8F-%D0%B8-%D1%82%D0%BE%D0%BA%D0%B5% │         │      │               │
+│                                                     │        │ D0%BD%D1%8B                                        │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Решение         │     19 │ #api-%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82-%D0%B8-% │ SKIPPED │      │ not checkable │
+│ проблем.md                                          │        │ D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B8-%D0%B7%D0%B0%D │         │      │               │
+│                                                     │        │ 0%BF%D1%80%D0%BE%D1%81%D0%BE%D0%B2                 │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Решение         │     20 │ #mock-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC               │ SKIPPED │      │ not checkable │
+│ проблем.md                                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Решение         │     21 │ #e2e-%D1%82%D0%B5%D1%81%D1%82%D1%8B                │ SKIPPED │      │ not checkable │
+│ проблем.md                                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Решение         │     22 │ #%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B0-%D0%B8-%D0%B │ SKIPPED │      │ not checkable │
+│ проблем.md                                          │        │ 4%D0%B5%D0%BF%D0%BB%D0%BE%D0%B9                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Решение         │    773 │ https://vitejs.dev/                                │ OK      │ 200  │               │
+│ проблем.md                                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Решение         │    774 │ https://www.typescriptlang.org/                    │ OK      │ 200  │               │
+│ проблем.md                                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Решение         │    775 │ https://playwright.dev/                            │ OK      │ 200  │               │
+│ проблем.md                                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Решение         │    776 │ https://orval.dev/                                 │ OK      │ 200  │               │
+│ проблем.md                                          │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Руководство     │     17 │ #%D1%87%D0%B5%D0%BA%D0%BB%D0%B8%D1%81%D1%82-%D0%B1 │ SKIPPED │      │ not checkable │
+│ разработчика.md                                     │        │ %D1%8B%D1%81%D1%82%D1%80%D0%BE%D0%B3%D0%BE-%D1%81% │         │      │               │
+│                                                     │        │ D1%82%D0%B0%D1%80%D1%82%D0%B0                      │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Руководство     │     18 │ #%D0%BE%D0%B1%D1%89%D0%B8%D0%B5-%D0%B7%D0%B0%D0%B4 │ SKIPPED │      │ not checkable │
+│ разработчика.md                                     │        │ %D0%B0%D1%87%D0%B8                                 │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Руководство     │     19 │ #%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81% │ SKIPPED │      │ not checkable │
+│ разработчика.md                                     │        │ D1%82%D0%B2%D0%BE-%D0%BF%D0%BE-code-review         │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Руководство     │     20 │ #%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D1%8B-%D0%BF%D0%BE │ SKIPPED │      │ not checkable │
+│ разработчика.md                                     │        │ -%D0%BE%D1%82%D0%BB%D0%B0%D0%B4%D0%BA%D0%B5        │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Руководство     │     21 │ #%D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%BE%D1%81%D1%82% │ SKIPPED │      │ not checkable │
+│ разработчика.md                                     │        │ D1%80%D0%B0%D0%BD%D1%91%D0%BD%D0%BD%D1%8B%D0%B5-%D │         │      │               │
+│                                                     │        │ 0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B8                 │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Руководство     │     22 │ #%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5- │ SKIPPED │      │ not checkable │
+│ разработчика.md                                     │        │ %D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8               │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Руководство     │    785 │ https://feature-sliced.design/docs/                │ OK      │ 200  │               │
+│ разработчика.md                                     │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Руководство     │    786 │ https://react.dev/                                 │ OK      │ 200  │               │
+│ разработчика.md                                     │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Руководство     │    787 │ https://tanstack.com/router/latest                 │ OK      │ 200  │               │
+│ разработчика.md                                     │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Руководство     │    788 │ https://tanstack.com/query/latest                  │ OK      │ 200  │               │
+│ разработчика.md                                     │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Руководство     │    789 │ https://www.typescriptlang.org/docs/handbook/intro │ OK      │ 200  │               │
+│ разработчика.md                                     │        │ .html                                              │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Руководство     │    790 │ https://vitest.dev/                                │ OK      │ 200  │               │
+│ разработчика.md                                     │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Руководство     │    791 │ https://zod.dev/                                   │ OK      │ 200  │               │
+│ разработчика.md                                     │        │                                                    │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Тестирование.md │     17 │ #%D0%BE%D0%B1%D0%B7%D0%BE%D1%80-%D1%82%D0%B5%D1%81 │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D │         │      │               │
+│                                                     │        │ 1%8F                                               │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Тестирование.md │     18 │ #%D1%8E%D0%BD%D0%B8%D1%82-%D1%82%D0%B5%D1%81%D1%82 │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-v │         │      │               │
+│                                                     │        │ itest                                              │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Тестирование.md │     19 │ #e2e-%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0 │ SKIPPED │      │ not checkable │
+│                                                     │        │ %B2%D0%B0%D0%BD%D0%B8%D0%B5-playwright             │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Тестирование.md │     20 │ #%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D0%B0%D1%86%D0%B8%D1%8F                            │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Тестирование.md │     21 │ #%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5- │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8               │         │      │               │
+│ Документация/Фронтенд/05-Разработка/Тестирование.md │    540 │ https://vitest.dev/                                │ OK      │ 200  │               │
+│ Документация/Фронтенд/05-Разработка/Тестирование.md │    541 │ https://playwright.dev/                            │ OK      │ 200  │               │
+│ Документация/Фронтенд/05-Разработка/Тестирование.md │    542 │ https://zod.dev/                                   │ OK      │ 200  │               │
+│ Документация/Фронтенд/README.md                     │     17 │ #%D0%BD%D0%B0%D0%B2%D0%B8%D0%B3%D0%B0%D1%86%D0%B8% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D1%8F-%D0%BF%D0%BE-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC% │         │      │               │
+│                                                     │        │ D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8          │         │      │               │
+│ Документация/Фронтенд/README.md                     │     18 │ #%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9-%D1%81 │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D1%82%D0%B0%D1%80%D1%82                           │         │      │               │
+│ Документация/Фронтенд/README.md                     │     19 │ #%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80% │ SKIPPED │      │ not checkable │
+│                                                     │        │ D0%B0-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0   │         │      │               │
+│ Документация/Фронтенд/README.md                     │     20 │ #%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5- │ SKIPPED │      │ not checkable │
+│                                                     │        │ %D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8               │         │      │               │
+│ Документация/Фронтенд/README.md                     │     27 │ 01-%D0%9E%D0%B1%D0%B7%D0%BE%D1%80%20%D0%BF%D1%80%D │ OK      │      │               │
+│                                                     │        │ 0%BE%D0%B5%D0%BA%D1%82%D0%B0/%D0%9E%20%D0%BF%D1%80 │         │      │               │
+│                                                     │        │ %D0%BE%D0%B5%D0%BA%D1%82%D0%B5.md                  │         │      │               │
+│ Документация/Фронтенд/README.md                     │     28 │ 01-%D0%9E%D0%B1%D0%B7%D0%BE%D1%80%20%D0%BF%D1%80%D │ OK      │      │               │
+│                                                     │        │ 0%BE%D0%B5%D0%BA%D1%82%D0%B0/%D0%A2%D0%B5%D1%85%D0 │         │      │               │
+│                                                     │        │ %BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8.md         │         │      │               │
+│ Документация/Фронтенд/README.md                     │     29 │ 01-%D0%9E%D0%B1%D0%B7%D0%BE%D1%80%20%D0%BF%D1%80%D │ OK      │      │               │
+│                                                     │        │ 0%BE%D0%B5%D0%BA%D1%82%D0%B0/%D0%90%D1%80%D1%85%D0 │         │      │               │
+│                                                     │        │ %B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0.md   │         │      │               │
+│ Документация/Фронтенд/README.md                     │     32 │ 02-%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%B │ OK      │      │               │
+│                                                     │        │ A%D0%B0%20%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8% │         │      │               │
+│                                                     │        │ D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F/%D0%A3%D │         │      │               │
+│                                                     │        │ 1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20% │         │      │               │
+│                                                     │        │ D0%B8%20%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA.md    │         │      │               │
+│ Документация/Фронтенд/README.md                     │     33 │ 02-%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%B │ OK      │      │               │
+│                                                     │        │ A%D0%B0%20%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8% │         │      │               │
+│                                                     │        │ D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F/%D0%9F%D │         │      │               │
+│                                                     │        │ 0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0% │         │      │               │
+│                                                     │        │ B5%20%D0%BE%D0%BA%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0 │         │      │               │
+│                                                     │        │ %B8%D1%8F.md                                       │         │      │               │
+│ Документация/Фронтенд/README.md                     │     34 │ 02-%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%B │ OK      │      │               │
+│                                                     │        │ A%D0%B0%20%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8% │         │      │               │
+│                                                     │        │ D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F/%D0%A1%D │         │      │               │
+│                                                     │        │ 0%B1%D0%BE%D1%80%D0%BA%D0%B0.md                    │         │      │               │
+│ Документация/Фронтенд/README.md                     │     35 │ 02-%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%B │ OK      │      │               │
+│                                                     │        │ A%D0%B0%20%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8% │         │      │               │
+│                                                     │        │ D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F/%D0%A1%D │         │      │               │
+│                                                     │        │ 1%82%D0%B8%D0%BB%D1%8C%20%D0%BA%D0%BE%D0%B4%D0%B0. │         │      │               │
+│                                                     │        │ md                                                 │         │      │               │
+│ Документация/Фронтенд/README.md                     │     36 │ 02-%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%B │ OK      │      │               │
+│                                                     │        │ A%D0%B0%20%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8% │         │      │               │
+│                                                     │        │ D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F/API%20%D │         │      │               │
+│                                                     │        │ 0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82.md              │         │      │               │
+│ Документация/Фронтенд/README.md                     │     37 │ 02-%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%B │ OK      │      │               │
+│                                                     │        │ A%D0%B0%20%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8% │         │      │               │
+│                                                     │        │ D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F/Docker.m │         │      │               │
+│                                                     │        │ d                                                  │         │      │               │
+│ Документация/Фронтенд/README.md                     │     40 │ 03-Architecture%20FSD/%D0%A1%D0%BB%D0%BE%D0%B9%20a │ OK      │      │               │
+│                                                     │        │ pp.md                                              │         │      │               │
+│ Документация/Фронтенд/README.md                     │     41 │ 03-Architecture%20FSD/%D0%A1%D0%BB%D0%BE%D0%B9%20p │ OK      │      │               │
+│                                                     │        │ ages.md                                            │         │      │               │
+│ Документация/Фронтенд/README.md                     │     42 │ 03-Architecture%20FSD/%D0%A1%D0%BB%D0%BE%D0%B9%20w │ OK      │      │               │
+│                                                     │        │ idgets.md                                          │         │      │               │
+│ Документация/Фронтенд/README.md                     │     43 │ 03-Architecture%20FSD/%D0%A1%D0%BB%D0%BE%D0%B9%20f │ OK      │      │               │
+│                                                     │        │ eatures.md                                         │         │      │               │
+│ Документация/Фронтенд/README.md                     │     44 │ 03-Architecture%20FSD/%D0%A1%D0%BB%D0%BE%D0%B9%20e │ OK      │      │               │
+│                                                     │        │ ntities.md                                         │         │      │               │
+│ Документация/Фронтенд/README.md                     │     45 │ 03-Architecture%20FSD/%D0%A1%D0%BB%D0%BE%D0%B9%20s │ OK      │      │               │
+│                                                     │        │ hared.md                                           │         │      │               │
+│ Документация/Фронтенд/README.md                     │     48 │ 04-%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%B │ OK      │      │               │
+│                                                     │        │ D%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C/ │         │      │               │
+│                                                     │        │ %D0%90%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D │         │      │               │
+│                                                     │        │ 1%86%D0%B8%D1%8F.md                                │         │      │               │
+│ Документация/Фронтенд/README.md                     │     49 │ 04-%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%B │ OK      │      │               │
+│                                                     │        │ D%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C/ │         │      │               │
+│                                                     │        │ %D0%9F%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D │         │      │               │
+│                                                     │        │ 1%81%D1%82%D0%B2%D0%B0.md                          │         │      │               │
+│ Документация/Фронтенд/README.md                     │     50 │ 04-%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%B │ OK      │      │               │
+│                                                     │        │ D%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C/ │         │      │               │
+│                                                     │        │ %D0%A1%D1%82%D0%B0%D1%82%D1%8C%D0%B8.md            │         │      │               │
+│ Документация/Фронтенд/README.md                     │     51 │ 04-%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%B │ OK      │      │               │
+│                                                     │        │ D%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C/ │         │      │               │
+│                                                     │        │ %D0%98%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D │         │      │               │
+│                                                     │        │ 0%B8%D1%8F%20%D1%81%20API.md                       │         │      │               │
+│ Документация/Фронтенд/README.md                     │     54 │ 05-%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%8 │ OK      │      │               │
+│                                                     │        │ 2%D0%BA%D0%B0/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE │         │      │               │
+│                                                     │        │ %D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D1%80%D0%B0%D0%B │         │      │               │
+│                                                     │        │ 7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA% │         │      │               │
+│                                                     │        │ D0%B0.md                                           │         │      │               │
+│ Документация/Фронтенд/README.md                     │     55 │ 05-%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%8 │ OK      │      │               │
+│                                                     │        │ 2%D0%BA%D0%B0/%D0%A2%D0%B5%D1%81%D1%82%D0%B8%D1%80 │         │      │               │
+│                                                     │        │ %D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5.md            │         │      │               │
+│ Документация/Фронтенд/README.md                     │     56 │ 05-%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%8 │ OK      │      │               │
+│                                                     │        │ 2%D0%BA%D0%B0/%D0%9A%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD │         │      │               │
+│                                                     │        │ %D0%B5%D0%BD%D1%82%D1%8B%20UI.md                   │         │      │               │
+│ Документация/Фронтенд/README.md                     │     57 │ 05-%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%8 │ OK      │      │               │
+│                                                     │        │ 2%D0%BA%D0%B0/%D0%A0%D0%B5%D1%88%D0%B5%D0%BD%D0%B8 │         │      │               │
+│                                                     │        │ %D0%B5%20%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%B │         │      │               │
+│                                                     │        │ C.md                                               │         │      │               │
+│ Документация/Фронтенд/README.md                     │    102 │ https://feature-sliced.design                      │ OK      │ 200  │               │
+│ Документация/Фронтенд/README.md                     │    103 │ https://react.dev                                  │ OK      │ 200  │               │
+│ Документация/Фронтенд/README.md                     │    104 │ https://www.typescriptlang.org                     │ OK      │ 200  │               │
+│ Документация/Фронтенд/README.md                     │    105 │ https://vitejs.dev                                 │ OK      │ 200  │               │
+│ Документация/Фронтенд/README.md                     │    106 │ https://tanstack.com/query                         │ OK      │ 200  │               │
+│ Документация/Фронтенд/README.md                     │    107 │ https://orval.dev                                  │ OK      │ 200  │               │
+│ Документация/Фронтенд/README.md                     │    108 │ https://zod.dev                                    │ OK      │ 200  │               │
+│ Документация/Фронтенд/README.md                     │    109 │ https://playwright.dev                             │ OK      │ 200  │               │
+│ Документация/Фронтенд/README.md                     │    110 │ https://vitest.dev                                 │ OK      │ 200  │               │
+│ Документация/Фронтенд/README.md                     │    111 │ https://tailwindcss.com                            │ OK      │ 200  │               │
+│ Процессы/readme.md                                  │      5 │ ./Sprint%20Planning.md                             │ OK      │      │               │
+│ Процессы/readme.md                                  │      6 │ ./Mid-Sprint%20Sync.md                             │ OK      │      │               │
+│ Процессы/readme.md                                  │      7 │ ./Code%20Review%20Checkpoint.md                    │ OK      │      │               │
+│ Процессы/readme.md                                  │      8 │ ./QA%20Review.md                                   │ OK      │      │               │
+│ Процессы/readme.md                                  │      9 │ ./Sprint%20Demo.md                                 │ OK      │      │               │
+│ Процессы/readme.md                                  │     10 │ ./Sprint%20Retrospective.md                        │ OK      │      │               │
+│ Процессы/readme.md                                  │     11 │ ./Backlog%20Refinement.md                          │ OK      │      │               │
+└─────────────────────────────────────────────────────┴────────┴────────────────────────────────────────────────────┴─────────┴──────┴───────────────┘
+Сломанных ссылок: 1 из 149
+EXIT_CODE=1

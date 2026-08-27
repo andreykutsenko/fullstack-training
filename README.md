@@ -13,7 +13,7 @@ Deployable projects live in their own repositories and are linked from the table
 | --- | --- | --- | --- |
 | 1 | [mdlinkcheck](mdlinkcheck/) | this repo | CLI tool that checks links in Markdown files. Generated from a single specification prompt — see the [report](mdlinkcheck/REPORT.md) for metrics, token spend and findings. |
 | 2 | [tg-llm-agent](https://github.com/andreykutsenko/tg-llm-agent) | separate repo | Telegram bot in front of a language model. Stateless by design; pluggable backend — local Ollama or Anthropic, switched by env vars only. |
-| 3 | mcp-shop-server | planned | MCP server giving an AI agent read-only access to a shop database over stdio. |
+| 3 | [mcp-shop-server](https://github.com/andreykutsenko/mcp-shop-server) | separate repo | MCP server giving an AI agent read-only access to a shop database over stdio. Three independent write-protection layers; proof-of-run artifacts committed under `.agent/tasks/`. |
 | 4 | [tg-llm-agent](https://github.com/andreykutsenko/tg-llm-agent) | same repo as #2 | Minimal AI agent: agentic loop, `exec` tool, skill files. Built on top of task 2. |
 
 Tasks 2 and 4 share one repository: task 4 extends the bot from task 2, so the two

@@ -17,6 +17,9 @@ Deployable projects live in their own repositories and are linked from the table
 | 4 | [tg-llm-agent](https://github.com/andreykutsenko/tg-llm-agent) | same repo as #2 | Minimal AI agent: agentic loop, `exec` tool, skill files. Built on top of task 2 — see [PR #1](https://github.com/andreykutsenko/tg-llm-agent/pull/1) for exactly what this task added, and tags `v1-bot` / `v2-agent` for the two states. |
 | 6 | [tg-llm-agent](https://github.com/andreykutsenko/tg-llm-agent) | same repo as #2 | Token audit of the agent from task 4: observability layer, a frozen 12-task benchmark with automated checks, and three measured optimisations. Cost per benchmark run cut by **72.3%** ($1.2667 → $0.3513) with success rate unchanged at 100% — see [PR #2](https://github.com/andreykutsenko/tg-llm-agent/pull/2) and the [audit report](https://github.com/andreykutsenko/tg-llm-agent/blob/main/REPORT-audit.md). |
 
+Task 5 (RAG with hybrid search) is in progress and will be added once submitted —
+hence the gap in the numbering.
+
 Tasks 2, 4 and 6 share one repository: each extends the previous one, so the stages
 are separated by tags and pull requests rather than by new repositories.
 
